@@ -722,7 +722,7 @@ Kiwi.Plugins.Primitives.Polygon.prototype.objType = function() {
 */
 Object.defineProperty(Kiwi.Plugins.Primitives.Polygon.prototype, "color", {
 	get: function() {
-		return [ this._color.rNorm, this._color.gNorm, this._color.bNorm ];
+		return [ this._color.rNorm, this._color.gNorm, this._color.bNorm , this._color.aNorm];
 	},
 	set: function( val ) {
 		this._color.set.apply( this._color, val );
@@ -738,7 +738,7 @@ Object.defineProperty(Kiwi.Plugins.Primitives.Polygon.prototype, "color", {
 */
 Object.defineProperty(Kiwi.Plugins.Primitives.Polygon.prototype, "strokeColor", {
 	get: function() {
-		return [ this._strokeColor.rNorm, this._strokeColor.gNorm, this._strokeColor.bNorm ];
+		return [ this._strokeColor.rNorm, this._strokeColor.gNorm, this._strokeColor.bNorm, this._strokeColor.aNorm ];
 	},
 	set: function( val ) {
 		this._strokeColor.set.apply( this._strokeColor, val );

@@ -117,9 +117,8 @@ Kiwi.Renderers.PrimitiveRenderer.prototype.setShaderPair =
 * @param camera {Camera}
 * @public
 */
-Kiwi.Renderers.PrimitiveRenderer.prototype.addToBatch =
-		function( gl, entity, indices, vertices, color ) {
-
+Kiwi.Renderers.PrimitiveRenderer.prototype.addToBatch
+	= function( gl, entity, indices, vertices, color ) {
 	var i,
 		indexLen = indices.length,
 		indexOffset = this._vertexBuffer.items.length / this.bufferItemSize,
@@ -135,10 +134,11 @@ Kiwi.Renderers.PrimitiveRenderer.prototype.addToBatch =
 
 		this._tempPoint = m.transformPoint( this._tempPoint );
 
+		var alpha = color.length > 3? color[3]: entity.alpha;
 		this._vertexBuffer.items.push(
 			this._tempPoint.x, this._tempPoint.y,
 			color[ 0 ], color[ 1 ], color[ 2 ],
-			entity.alpha
+			alpha
 		);
 	}
 
