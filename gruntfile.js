@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 		concat: {
 
 			build: {
-				src:[ "src/**" ],
+				src:[ "src/_main.js", "src/_polygon.js", "src/**" ],
 				dest: "<%= pkg.main %>"
 			}
 
@@ -58,6 +58,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( "grunt-contrib-yuidoc" );
 	grunt.loadNpmTasks( "grunt-contrib-jshint" );
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
+
 
 	grunt.registerTask(
 		"default",
